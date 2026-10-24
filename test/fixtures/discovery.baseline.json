@@ -1,0 +1,361 @@
+{
+  "devices": {
+    "FRANCEINTER": {
+      "external_id": "ext:test-integration:station:franceinter",
+      "should_poll": false,
+      "params": ["RADIO_FRANCE_STATION"],
+      "features": [
+        {
+          "external_id": "ext:test-integration:station:franceinter:show",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:franceinter:program",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:franceinter:track",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:franceinter:follow",
+          "category": "switch",
+          "type": "binary",
+          "min": 0,
+          "max": 1,
+          "read_only": false,
+          "has_feedback": true
+        }
+      ]
+    },
+    "FIP_ROCK": {
+      "external_id": "ext:test-integration:station:fip_rock",
+      "should_poll": false,
+      "params": ["RADIO_FRANCE_STATION"],
+      "features": [
+        {
+          "external_id": "ext:test-integration:station:fip_rock:show",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:fip_rock:program",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:fip_rock:track",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:fip_rock:follow",
+          "category": "switch",
+          "type": "binary",
+          "min": 0,
+          "max": 1,
+          "read_only": false,
+          "has_feedback": true
+        }
+      ]
+    },
+    "FRANCEBLEU_ALSACE": {
+      "external_id": "ext:test-integration:station:francebleu_alsace",
+      "should_poll": false,
+      "params": ["RADIO_FRANCE_STATION"],
+      "features": [
+        {
+          "external_id": "ext:test-integration:station:francebleu_alsace:show",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:francebleu_alsace:program",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:francebleu_alsace:track",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": true
+        },
+        {
+          "external_id": "ext:test-integration:station:francebleu_alsace:follow",
+          "category": "switch",
+          "type": "binary",
+          "min": 0,
+          "max": 1,
+          "read_only": false,
+          "has_feedback": true
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "config_schema": [
+      {
+        "key": "intro",
+        "type": "section"
+      },
+      {
+        "key": "key_help",
+        "type": "section"
+      },
+      {
+        "key": "api_key",
+        "type": "secret"
+      },
+      {
+        "key": "language",
+        "type": "select"
+      },
+      {
+        "key": "quota_help",
+        "type": "section"
+      },
+      {
+        "key": "daily_budget",
+        "type": "number"
+      },
+      {
+        "key": "min_interval_seconds",
+        "type": "number"
+      },
+      {
+        "key": "terms_help",
+        "type": "section"
+      }
+    ],
+    "actions": ["test_key"],
+    "action_fields": {
+      "test_key": []
+    },
+    "widgets": [
+      {
+        "key": "now_playing",
+        "settings": ["station"],
+        "options": {}
+      },
+      {
+        "key": "schedule",
+        "settings": ["station"],
+        "options": {}
+      },
+      {
+        "key": "api_usage",
+        "settings": [],
+        "options": {}
+      }
+    ],
+    "scene_triggers": [
+      {
+        "key": "track_started",
+        "fields": [
+          {
+            "key": "station",
+            "options": []
+          }
+        ],
+        "variables": [
+          {
+            "key": "station",
+            "type": "string"
+          },
+          {
+            "key": "station_name",
+            "type": "string"
+          },
+          {
+            "key": "title",
+            "type": "string"
+          },
+          {
+            "key": "artist",
+            "type": "string"
+          },
+          {
+            "key": "album",
+            "type": "string"
+          },
+          {
+            "key": "year",
+            "type": "number"
+          },
+          {
+            "key": "label",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "key": "show_started",
+        "fields": [
+          {
+            "key": "station",
+            "options": []
+          }
+        ],
+        "variables": [
+          {
+            "key": "station",
+            "type": "string"
+          },
+          {
+            "key": "station_name",
+            "type": "string"
+          },
+          {
+            "key": "show",
+            "type": "string"
+          },
+          {
+            "key": "title",
+            "type": "string"
+          },
+          {
+            "key": "description",
+            "type": "string"
+          },
+          {
+            "key": "url",
+            "type": "string"
+          },
+          {
+            "key": "ends_at",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "key": "program_started",
+        "fields": [
+          {
+            "key": "station",
+            "options": []
+          }
+        ],
+        "variables": [
+          {
+            "key": "station",
+            "type": "string"
+          },
+          {
+            "key": "station_name",
+            "type": "string"
+          },
+          {
+            "key": "show",
+            "type": "string"
+          },
+          {
+            "key": "title",
+            "type": "string"
+          },
+          {
+            "key": "description",
+            "type": "string"
+          },
+          {
+            "key": "url",
+            "type": "string"
+          },
+          {
+            "key": "ends_at",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "scene_actions": [
+      {
+        "key": "get_now_playing",
+        "fields": ["station"],
+        "options": {},
+        "outputs": [
+          {
+            "key": "show",
+            "type": "string"
+          },
+          {
+            "key": "program",
+            "type": "string"
+          },
+          {
+            "key": "title",
+            "type": "string"
+          },
+          {
+            "key": "artist",
+            "type": "string"
+          },
+          {
+            "key": "album",
+            "type": "string"
+          },
+          {
+            "key": "ends_at",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "key": "get_upcoming",
+        "fields": ["station", "count"],
+        "options": {},
+        "outputs": [
+          {
+            "key": "summary",
+            "type": "string"
+          },
+          {
+            "key": "next_show",
+            "type": "string"
+          },
+          {
+            "key": "next_start",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

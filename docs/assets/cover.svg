@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="534" viewBox="0 0 800 534">
+  <!-- Generic illustration: a radio set, its waves and a program grid. No
+       logo nor brand mark of Radio France or of its stations. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14213d"/>
+      <stop offset="1" stop-color="#1f4e79"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9a15c"/>
+      <stop offset="1" stop-color="#b9672b"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef3f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="534" fill="url(#sky)"/>
+  <!-- soft dots -->
+  <g fill="#ffffff" opacity="0.06">
+    <circle cx="90" cy="70" r="40"/><circle cx="720" cy="470" r="70"/><circle cx="640" cy="60" r="24"/>
+  </g>
+  <!-- the waves -->
+  <g fill="none" stroke="#7fd1c7" stroke-linecap="round">
+    <path d="M 345 120 A 70 70 0 0 1 345 220" stroke-width="10" opacity="0.9"/>
+    <path d="M 375 90 A 110 110 0 0 1 375 250" stroke-width="10" opacity="0.6"/>
+    <path d="M 405 60 A 150 150 0 0 1 405 280" stroke-width="10" opacity="0.35"/>
+  </g>
+  <!-- the radio set -->
+  <g transform="translate(70 150)">
+    <line x1="210" y1="0" x2="250" y2="-95" stroke="#cfd8e3" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="250" cy="-95" r="8" fill="#cfd8e3"/>
+    <rect x="0" y="0" width="270" height="200" rx="26" fill="url(#wood)"/>
+    <rect x="18" y="18" width="234" height="164" rx="16" fill="#6b3a17" opacity="0.25"/>
+    <!-- speaker grille -->
+    <circle cx="85" cy="100" r="58" fill="#3a2414"/>
+    <g fill="#c98a4e">
+      <circle cx="60" cy="75" r="5"/><circle cx="85" cy="75" r="5"/><circle cx="110" cy="75" r="5"/>
+      <circle cx="47" cy="100" r="5"/><circle cx="72" cy="100" r="5"/><circle cx="98" cy="100" r="5"/><circle cx="123" cy="100" r="5"/>
+      <circle cx="60" cy="125" r="5"/><circle cx="85" cy="125" r="5"/><circle cx="110" cy="125" r="5"/>
+    </g>
+    <!-- tuning dial -->
+    <rect x="160" y="42" width="84" height="48" rx="8" fill="#fbe7c6"/>
+    <g stroke="#8a5a2b" stroke-width="2">
+      <line x1="170" y1="78" x2="170" y2="70"/><line x1="182" y1="78" x2="182" y2="66"/>
+      <line x1="194" y1="78" x2="194" y2="70"/><line x1="206" y1="78" x2="206" y2="66"/>
+      <line x1="218" y1="78" x2="218" y2="70"/><line x1="230" y1="78" x2="230" y2="66"/>
+    </g>
+    <line x1="200" y1="48" x2="200" y2="86" stroke="#d64545" stroke-width="3"/>
+    <!-- knobs -->
+    <circle cx="180" cy="135" r="20" fill="#3a2414"/><circle cx="180" cy="135" r="8" fill="#c98a4e"/>
+    <circle cx="228" cy="135" r="20" fill="#3a2414"/><circle cx="228" cy="135" r="8" fill="#c98a4e"/>
+    <!-- feet -->
+    <rect x="30" y="196" width="40" height="14" rx="5" fill="#3a2414"/>
+    <rect x="200" y="196" width="40" height="14" rx="5" fill="#3a2414"/>
+  </g>
+  <!-- the program grid -->
+  <g transform="translate(470 110)">
+    <rect x="0" y="0" width="270" height="320" rx="18" fill="url(#card)"/>
+    <rect x="0" y="0" width="270" height="54" rx="18" fill="#2a9d8f"/>
+    <rect x="0" y="36" width="270" height="18" fill="#2a9d8f"/>
+    <circle cx="30" cy="27" r="9" fill="#ffffff"/>
+    <rect x="50" y="21" width="120" height="12" rx="6" fill="#ffffff" opacity="0.9"/>
+    <g>
+      <rect x="20" y="74" width="46" height="14" rx="7" fill="#9fb3c8"/>
+      <rect x="80" y="70" width="170" height="44" rx="10" fill="#e76f51"/>
+      <rect x="92" y="82" width="110" height="9" rx="4" fill="#ffffff" opacity="0.9"/>
+      <rect x="92" y="97" width="70" height="7" rx="3" fill="#ffffff" opacity="0.6"/>
+
+      <rect x="20" y="134" width="46" height="14" rx="7" fill="#9fb3c8"/>
+      <rect x="80" y="130" width="170" height="44" rx="10" fill="#d9e2ec"/>
+      <rect x="92" y="142" width="130" height="9" rx="4" fill="#627d98"/>
+      <rect x="92" y="157" width="80" height="7" rx="3" fill="#9fb3c8"/>
+
+      <rect x="20" y="194" width="46" height="14" rx="7" fill="#9fb3c8"/>
+      <rect x="80" y="190" width="170" height="44" rx="10" fill="#d9e2ec"/>
+      <rect x="92" y="202" width="100" height="9" rx="4" fill="#627d98"/>
+      <rect x="92" y="217" width="90" height="7" rx="3" fill="#9fb3c8"/>
+
+      <rect x="20" y="254" width="46" height="14" rx="7" fill="#9fb3c8"/>
+      <rect x="80" y="250" width="170" height="44" rx="10" fill="#d9e2ec"/>
+      <rect x="92" y="262" width="120" height="9" rx="4" fill="#627d98"/>
+      <rect x="92" y="277" width="60" height="7" rx="3" fill="#9fb3c8"/>
+    </g>
+  </g>
+  <!-- a music note between the two -->
+  <g fill="#f4d35e" transform="translate(395 330)">
+    <ellipse cx="0" cy="40" rx="16" ry="12"/>
+    <rect x="12" y="-10" width="5" height="50"/>
+    <path d="M 17 -10 Q 40 0 36 22 Q 32 8 17 4 Z"/>
+  </g>
+</svg>

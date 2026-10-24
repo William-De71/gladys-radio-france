@@ -1,0 +1,28 @@
+Gladys Radio France integration
+Copyright 2026 William Deren
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It reads the Radio France Open API (https://developers.radiofrance.fr) with
+the personal key of each user. This integration is unofficial: it is not
+affiliated with nor endorsed by Radio France. Radio France and the names of
+its stations (France Inter, franceinfo, France Culture, France Musique, FIP,
+Mouv', ICI) belong to Radio France. No logo or brand mark of Radio France is
+used: the cover is a generic illustration.
+
+The data shown by the integration is provided by the Radio France Open API
+("données fournies par l'Open API Radio France") and is subject to its terms
+of use: it is not stored, not modified and not used commercially.
+
+The queries (brands, live, grid) and the shape of the answers were taken from
+the official documentation of the Open API and from projects that use it, read
+only, no code copied:
+  - the Radio France Open API workshop
+    (https://github.com/glecoq-rf/openapi-workshop, ISC);
+  - the Home Assistant custom integration radio-france-home-assistant
+    (https://github.com/kamaradclimber/radio-france-home-assistant, Apache
+    License 2.0);
+  - whats-on-fip (https://github.com/dixneuf19/whats-on-fip).
+The fake API of the tests (test/helpers/fake-openapi.js) answers with those
+shapes and with made-up programs only: no data of Radio France is stored in
+this repository.
