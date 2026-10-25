@@ -12,7 +12,7 @@ Utiliser l’Open API, c’est accepter ses conditions : une clé personnelle, u
 
 ## Prérequis
 
-- Gladys Assistant 5.1.0 ou plus récent.
+- Gladys Assistant 5.3.0 ou plus récent.
 - Une **clé Open API** gratuite et personnelle : chaque utilisateur de Gladys demande la sienne.
 - Un accès à Internet depuis Gladys (les requêtes partent vers `openapi.radiofrance.fr`).
 

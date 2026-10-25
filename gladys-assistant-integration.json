@@ -10,8 +10,20 @@
   },
   "version": "0.1.0",
   "docker_image": "ghcr.io/william-de71/gladys-radio-france:0.1.0",
-  "gladys_version": ">=5.1.0",
+  "gladys_version": ">=5.3.0",
   "categories": ["multimedia", "leisure"],
+  "keywords": [
+    "France Inter",
+    "franceinfo",
+    "France Culture",
+    "France Musique",
+    "FIP",
+    "Mouv",
+    "ICI",
+    "webradio",
+    "Open API"
+  ],
+  "countries": ["FR"],
   "cover_image": "https://raw.githubusercontent.com/William-De71/gladys-radio-france/main/cover.jpg",
   "transports": ["cloud"],
   "config_schema": [

@@ -65,8 +65,8 @@ test('no stream, no logo: the terms of use of the Open API', () => {
   assert.doesNotMatch(source('../src/devices.js'), /liveStream/);
 });
 
-test('widgets and scenes need Gladys 5.1.0; no field of a newer Gladys, no permission', () => {
-  assert.equal(manifest.gladys_version, '>=5.1.0');
+test('widgets and scenes need 5.1.0, catalog keywords 5.3.0; no other newer field, no permission', () => {
+  assert.equal(manifest.gladys_version, '>=5.3.0');
   assert.deepEqual(manifest.categories, ['multimedia', 'leisure']);
   const text = JSON.stringify(manifest);
   assert.doesNotMatch(text, /"source":"houses"/, 'houses need 5.2.0');
@@ -77,9 +77,8 @@ test('widgets and scenes need Gladys 5.1.0; no field of a newer Gladys, no permi
     'containers',
     'webhooks',
     'messaging',
-    // Added to the store on 2026-10-23, they need Gladys 5.3.0.
-    'keywords',
-    'countries',
+    // Added to the store on 2026-10-23 (Gladys 5.3.0); keywords and countries are
+    // checked below.
     'energy_contracts',
     'account_schema',
   ]) {
@@ -197,4 +196,16 @@ test('limits of the store: counts, timeouts, sizes, no secret in widget settings
   const cover = readFileSync(new URL('../cover.jpg', import.meta.url));
   assert.ok(cover.length < 150 * 1024, `cover.jpg: ${cover.length} bytes`);
   assert.equal(cover.readUInt16BE(0), 0xffd8, 'cover.jpg is a JPEG');
+});
+
+test('catalog search terms of Gladys 5.3.0: keywords within bounds, countries', () => {
+  assert.ok(Array.isArray(manifest.keywords));
+  assert.ok(manifest.keywords.length >= 1 && manifest.keywords.length <= 10);
+  const normalized = manifest.keywords.map((keyword) => keyword.trim().toLowerCase());
+  for (const keyword of normalized) {
+    assert.ok(keyword.length >= 2 && keyword.length <= 30, keyword);
+  }
+  assert.equal(new Set(normalized).size, normalized.length, 'keywords must be unique');
+  assert.ok(!normalized.includes(manifest.name.toLowerCase()), 'the name is already searched');
+  assert.deepEqual(manifest.countries, ['FR']);
 });

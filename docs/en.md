@@ -12,7 +12,7 @@ Using the Open API means accepting its terms: a personal key, private and non-co
 
 ## Prerequisites
 
-- Gladys Assistant 5.1.0 or later.
+- Gladys Assistant 5.3.0 or later.
 - A free **Open API key**, personal: each Gladys user requests their own.
 - Internet access from Gladys (the requests go to `openapi.radiofrance.fr`).
 

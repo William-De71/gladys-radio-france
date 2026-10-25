@@ -12,7 +12,7 @@ Wer die Open API nutzt, akzeptiert ihre Bedingungen: ein persönlicher Schlüsse
 
 ## Voraussetzungen
 
-- Gladys Assistant 5.1.0 oder neuer.
+- Gladys Assistant 5.3.0 oder neuer.
 - Ein kostenloser, persönlicher **Open-API-Schlüssel**: Jeder Gladys-Benutzer beantragt seinen eigenen.
 - Internetzugang von Gladys aus (die Anfragen gehen an `openapi.radiofrance.fr`).
 
